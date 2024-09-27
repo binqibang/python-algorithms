@@ -18,4 +18,3 @@ def top_k_frequent(nums: List[int], k: int) -> List[int]:
         else:
             heapq.heappush(min_heap, (value, key))
     return [e[1] for e in min_heap]
-
