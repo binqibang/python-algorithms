@@ -8,7 +8,7 @@ class Solution(object):
 
     def diameter_of_bt(self, root: BTNode) -> int:
         def dfs(root: BTNode) -> int:
-            if root is None:
+            if not root:
                 return 0
             left = dfs(root.left)
             right = dfs(root.right)

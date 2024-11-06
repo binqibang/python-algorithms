@@ -19,7 +19,7 @@ def post_order_traverse(root: BTNode) -> list[int]:
     lst = []
     while stack:
         node, visited = stack.pop()
-        if node is None:
+        if not node:
             continue
         if not visited:
             stack.append((node, 1))
@@ -35,7 +35,7 @@ def in_order_traverse(root: BTNode) -> list[int]:
     lst = []
     while stack:
         node, visited = stack.pop()
-        if node is None:
+        if not node:
             continue
         if not visited:
             stack.append((node.right, 0))
