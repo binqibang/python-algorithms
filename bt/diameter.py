@@ -1,4 +1,4 @@
-from bt import BTNode
+from bt import TreeNode
 
 
 class Solution(object):
@@ -6,8 +6,8 @@ class Solution(object):
     def __init__(self):
         self.diameter = 0
 
-    def diameter_of_bt(self, root: BTNode) -> int:
-        def dfs(root: BTNode) -> int:
+    def diameter_of_bt(self, root: TreeNode) -> int:
+        def dfs(root: TreeNode) -> int:
             if not root:
                 return 0
             left = dfs(root.left)

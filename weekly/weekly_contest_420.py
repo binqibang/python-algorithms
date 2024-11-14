@@ -3,7 +3,7 @@ from typing import List
 
 
 class WeeklyContest420:
-    def stringSequence(self, target: str) -> List[str]:
+    def string_sequence(self, target: str) -> List[str]:
         ans = []
         curr = []
         for i, ch in enumerate(target):
@@ -14,7 +14,7 @@ class WeeklyContest420:
                 ans.append("".join(curr))
         return ans
 
-    def numberOfSubstrings(self, s: str, k: int) -> int:
+    def number_of_substrings(self, s: str, k: int) -> int:
         ans = 0
         n = len(s)
         for left in range(n):
@@ -29,7 +29,7 @@ class WeeklyContest420:
                     break
         return ans
 
-    def minOperations(self, nums: List[int]) -> int:
+    def min_operations(self, nums: List[int]) -> int:
         # 获取x最大真因数
         def find_factor(x):
             if x <= 1:
@@ -61,8 +61,8 @@ class WeeklyContest420:
 if __name__ == '__main__':
     wc420 = WeeklyContest420()
     target = "abc"
-    print(wc420.stringSequence(target))
+    print(wc420.string_sequence(target))
     s, k = "abcab", 2
-    print(wc420.numberOfSubstrings(s, k))
+    print(wc420.number_of_substrings(s, k))
     nums = [25, 7]
-    print(wc420.minOperations(nums))
+    print(wc420.min_operations(nums))

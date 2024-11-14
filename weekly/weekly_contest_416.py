@@ -3,7 +3,7 @@ import heapq
 
 
 class WeeklyContest416:
-    def reportSpam(self, message: List[str], bannedWords: List[str]) -> bool:
+    def report_spam(self, message: List[str], bannedWords: List[str]) -> bool:
         count = 0
         banner_words_set = set(bannedWords)
         for word in message:
@@ -13,7 +13,7 @@ class WeeklyContest416:
                 break
         return count >= 2
 
-    def minNumberOfSeconds(self, mountainHeight: int, workerTimes: List[int]) -> int:
+    def min_number_of_seconds(self, mountainHeight: int, workerTimes: List[int]) -> int:
         min_heap = []
         for t in workerTimes:
             # total_time, time, count
@@ -28,7 +28,7 @@ class WeeklyContest416:
             heapq.heappush(min_heap, (total_time, time, count))
         return ans
 
-    def validSubstringCount(self, word1: str, word2: str) -> int:
+    def valid_substring_count(self, word1: str, word2: str) -> int:
         # "bcca" "abc"
         n1, n2 = len(word1), len(word2)
         if n1 < n2:
@@ -65,5 +65,5 @@ class WeeklyContest416:
 
 if __name__ == '__main__':
     w = WeeklyContest416()
-    print(w.validSubstringCount("bbb", "bc"))
-    print(w.minNumberOfSeconds(10, [3, 2, 2, 4]))
+    print(w.valid_substring_count("bbb", "bc"))
+    print(w.min_number_of_seconds(10, [3, 2, 2, 4]))

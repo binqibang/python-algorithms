@@ -3,7 +3,7 @@ import heapq
 
 
 class WeeklyContest422:
-    def isBalanced(self, num: str) -> bool:
+    def is_balanced(self, num: str) -> bool:
         odd_sum, even_sum = 0, 0
         for i, ch in enumerate(num):
             if i % 2 == 0:
@@ -13,7 +13,7 @@ class WeeklyContest422:
 
         return odd_sum == even_sum
 
-    def minTimeToReach(self, moveTime: List[List[int]]) -> int:
+    def min_time_to_reach(self, moveTime: List[List[int]]) -> int:
         m, n = len(moveTime), len(moveTime[0])
         distance = [[float('inf')] * n for _ in range(m)]
         # print(distance)
@@ -42,7 +42,7 @@ class WeeklyContest422:
                         queue.append((x, y, new_time))
         return distance[m - 1][n - 1]
 
-    def minTimeToReachII(self, moveTime: List[List[int]]) -> int:
+    def min_time_to_reach_ii(self, moveTime: List[List[int]]) -> int:
         m, n = len(moveTime), len(moveTime[0])
         dp = [[float('inf')] * n for _ in range(m)]
         directions = [
@@ -74,4 +74,4 @@ class WeeklyContest422:
 
 if __name__ == '__main__':
     wc = WeeklyContest422()
-    print(wc.minTimeToReach([[3, 72, 14], [25, 81, 5]]))
+    print(wc.min_time_to_reach([[3, 72, 14], [25, 81, 5]]))

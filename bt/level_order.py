@@ -1,9 +1,9 @@
 from typing import List
 
-from bt import BTNode
+from bt import TreeNode
 
 
-def level_order(root: BTNode) -> List[List[int]]:
+def level_order(root: TreeNode) -> List[List[int]]:
     lst = []
     if root is None:
         return lst

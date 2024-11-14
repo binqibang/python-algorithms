@@ -1,8 +1,8 @@
-from bt import BTNode
+from bt import TreeNode
 
 
-def pre_order_traverse(root: BTNode) -> list[int]:
-    def dfs(root: BTNode, lst: list[int]):
+def pre_order_traverse(root: TreeNode) -> list[int]:
+    def dfs(root: TreeNode, lst: list[int]):
         if root is None:
             return
         lst.append(root.val)
@@ -14,7 +14,7 @@ def pre_order_traverse(root: BTNode) -> list[int]:
     return lst
 
 
-def post_order_traverse(root: BTNode) -> list[int]:
+def post_order_traverse(root: TreeNode) -> list[int]:
     stack = [(root, 0)]
     lst = []
     while stack:
@@ -30,7 +30,7 @@ def post_order_traverse(root: BTNode) -> list[int]:
     return lst
 
 
-def in_order_traverse(root: BTNode) -> list[int]:
+def in_order_traverse(root: TreeNode) -> list[int]:
     stack = [(root, 0)]
     lst = []
     while stack:
