@@ -8,17 +8,15 @@ class TreeNode(object):
 def create_bt(preorder: list[int], inorder: list[int]) -> TreeNode:
     # pre 3 9 20 15 7
     # in  9 3 15 20 7
-    def build(preorder, p_start, p_end, inorder, i_start, i_end):
-        if p_start > p_end or i_start > i_end:
+    def build(pre_start, pre_end, in_start, in_end):
+        if pre_start > pre_end:
             return None
-        root_val = preorder[p_start]
+        root_val = preorder[pre_start]
         root = TreeNode(root_val)
         root_idx = inorder.index(root_val)
-        left_len = root_idx - i_start
-        root.left = build(preorder, p_start + 1, p_start + left_len,
-                          inorder, i_start, root_idx - 1)
-        root.right = build(preorder, p_start + left_len + 1, p_end,
-                           inorder, root_idx + 1, i_end)
+        left_len = root_idx - in_start
+        root.left = build(pre_start + 1, pre_start + left_len, in_start, root_idx - 1)
+        root.right = build(pre_start + left_len + 1, pre_end, root_idx + 1, in_end)
         return root
 
-    return build(preorder, 0, len(preorder) - 1, inorder, 0, len(inorder) - 1)
+    return build(0, len(preorder) - 1, 0, len(inorder) - 1)

@@ -30,4 +30,4 @@ def permute(nums: List[int], k: int) -> List[List[int]]:
 
 
 if __name__ == '__main__':
-    print(permute([1, 2, 3], 2))
+    print(permute([1, 2, 3, 4], 2))

@@ -2,6 +2,11 @@ from typing import List
 
 
 def restore_ip_addresses(s: str) -> List[str]:
+    """
+    给定一个只包含数字的字符串，复原它并返回所有可能的 IPv4 地址格式
+    :param s: 输入的字符串
+    :return: 所有可能的 IPv4 地址
+    """
     # 25525511135 255.255.11.135, 255.255.111.35
     ips = []
     SEG_CNT, MAX_SEG = 4, 255

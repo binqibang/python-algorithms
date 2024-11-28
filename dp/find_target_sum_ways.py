@@ -2,6 +2,13 @@ from typing import List
 
 
 def find_target_sum_ways(nums: List[int], target: int) -> int:
+    """
+    给你一个非负整数数组 nums 和一个整数 target，向数组中的每个整数前添加 '+' 或 '-' ，
+    以使结果数组 nums 的和为 target 。返回符合要求的表达式数目
+    :param nums: 整数数组
+    :param target: 目标
+    :return: 符合要求的表达式数目
+    """
     # sum1 - sum2 = target
     # sum1 + sum2 = sum  =>  sum1 = (sum + target) / 2
     total = sum(nums)

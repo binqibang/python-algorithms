@@ -1,7 +1,7 @@
 from typing import List
 
 
-def canFinish(numCourses: int, prerequisites: List[List[int]]) -> bool:
+def can_finish(numCourses: int, prerequisites: List[List[int]]) -> bool:
     edges = [[] for _ in range(numCourses)]
     indegree = [0] * numCourses
     for u, v in prerequisites:

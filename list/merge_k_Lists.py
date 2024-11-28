@@ -5,7 +5,7 @@ def merge_k_lists(lists: list[ListNode]) -> ListNode:
     return merge(lists, 0, len(lists) - 1)
 
 
-def merge(lists: list[ListNode], start, end) -> ListNode:
+def merge(lists, start, end):
     if start > end:
         return None
     if start == end:

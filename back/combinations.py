@@ -26,4 +26,4 @@ def combine(nums: List[int], k: int) -> List[List[int]]:
 
 
 if __name__ == '__main__':
-    print(combine([1, 2, 3], 2))
+    print(combine([1, 2, 3, 4, 8], 3))

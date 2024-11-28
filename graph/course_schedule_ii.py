@@ -1,7 +1,7 @@
 from typing import List
 
 
-def findOrder(numCourses: int, prerequisites: List[List[int]]) -> List[int]:
+def find_order(numCourses: int, prerequisites: List[List[int]]) -> List[int]:
     edges = [[] for _ in range(numCourses)]
     indegree = [0] * numCourses
     for u, v in prerequisites:
