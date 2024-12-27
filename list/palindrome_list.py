@@ -3,7 +3,7 @@ from typing import Optional
 from list import ListNode
 
 
-def isPalindrome(head: Optional[ListNode]) -> bool:
+def is_palindrome(head: Optional[ListNode]) -> bool:
     if not head.next:
         return True
     fast, slow = head, head

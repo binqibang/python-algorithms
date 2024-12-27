@@ -1,7 +1,7 @@
 from typing import List
 
 
-def combinationSum(candidates: List[int], target: int) -> List[List[int]]:
+def combination_sum(candidates: List[int], target: int) -> List[List[int]]:
     n = len(candidates)
     stack = []
     ans = []
@@ -23,4 +23,4 @@ def combinationSum(candidates: List[int], target: int) -> List[List[int]]:
 
 
 if __name__ == '__main__':
-    print(combinationSum([1, 2, 3], 0))
+    print(combination_sum([1, 2, 3], 0))

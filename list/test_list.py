@@ -1,7 +1,7 @@
 from unittest import TestCase
 from list import *
 from list.merge_k_Lists import merge_k_lists
-from my_lru import LruCache
+from my_lru import LRUCache
 
 
 class Test(TestCase):
@@ -17,7 +17,7 @@ class Test(TestCase):
         self.assertEqual(all(merged[i] <= merged[i + 1] for i in range(len(merged) - 1)), True)
 
     def test_lru(self):
-        lru = LruCache(2)
+        lru = LRUCache(2)
         lru.set(1, 1)
         lru.set(2, 2)
         self.assertEqual(2, lru.get(2))

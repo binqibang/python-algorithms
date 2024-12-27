@@ -3,7 +3,7 @@ from typing import Optional
 from list import ListNode
 
 
-def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+def add_two_numbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
     if not l1:
         return l2
     if not l2:
