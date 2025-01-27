@@ -1,9 +1,8 @@
-from itertools import accumulate
 from typing import List
 
 
 class WeeklyContest427:
-    def constructTransformedArray(self, nums: List[int]) -> List[int]:
+    def construct_transformed_array(self, nums: List[int]) -> List[int]:
         n = len(nums)
         res = [0] * n
         for i, num in enumerate(nums):
@@ -12,7 +11,7 @@ class WeeklyContest427:
 
         return res
 
-    def maxSubarraySum(self, nums: List[int], k: int) -> int:
+    def max_subarray_sum(self, nums: List[int], k: int) -> int:
         n = len(nums)
         pre = [0] * (n + 1)
         for i in range(n):
@@ -31,4 +30,4 @@ class WeeklyContest427:
 
 if __name__ == '__main__':
     wc = WeeklyContest427()
-    print(wc.maxSubarraySum([1, 2], 1))
+    print(wc.max_subarray_sum([1, 2], 1))

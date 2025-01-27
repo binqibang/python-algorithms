@@ -39,9 +39,9 @@ class WeeklyContest424:
     def min_zero_array(self, nums: List[int], queries: List[List[int]]) -> int:
         n = len(nums)
 
-        def check(mid):
+        def check(pos):
             diff = [0] * n
-            for i in range(mid):
+            for i in range(pos):
                 l, r, val = queries[i]
                 diff[l] += val
                 if r + 1 < n:

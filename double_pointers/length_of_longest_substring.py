@@ -1,4 +1,4 @@
-def lengthOfLongestSubstring(s: str) -> int:
+def length_of_longest_substring(s: str) -> int:
     occ = set()
     left = 0
     max_len = 0

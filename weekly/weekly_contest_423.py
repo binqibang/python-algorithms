@@ -4,9 +4,9 @@ from typing import List
 
 class WeeklyContest423:
     def has_increasing_subarrays(self, nums: List[int], k: int) -> bool:
-        def is_increasing(nums: List[int]) -> bool:
-            for i in range(len(nums) - 1):
-                if nums[i] >= nums[i + 1]:
+        def is_increasing(arr: List[int]) -> bool:
+            for i in range(len(arr) - 1):
+                if arr[i] >= arr[i + 1]:
                     return False
             return True
 
@@ -44,7 +44,7 @@ class WeeklyContest423:
         return max_k
 
     def sum_of_good_subsequences(self, nums: List[int]) -> int:
-        MOD = int(1e9 + 7)
+        mod = int(1e9 + 7)
 
         count = Counter()       # 末尾为count[i]的好子序列个数
         subseq_sum = Counter()  # 末尾为count[i]的好子序列和
@@ -58,9 +58,9 @@ class WeeklyContest423:
             curr_sum += num * count[num - 1] + count[num + 1]
 
             count[num] += 1 + count[num + 1] + count[num - 1]
-            count[num] %= MOD
-            subseq_sum[num] = (curr_sum + subseq_sum[num]) % MOD
-            ans = (ans + curr_sum) % MOD
+            count[num] %= mod
+            subseq_sum[num] = (curr_sum + subseq_sum[num]) % mod
+            ans = (ans + curr_sum) % mod
 
         return ans
 
